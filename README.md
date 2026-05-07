@@ -18,16 +18,6 @@ Replaced a ฿3M+ quoted MES solution with a Python event pipeline for 23 Tetra 
 
 ---
 
-### 🏨 Staywise
-Hotel management SaaS built for Myanmar boutique hotels. Full reservation lifecycle, night audit, folio billing, receipt printing, and staff management.
-
-- Stack: Next.js 14, Supabase (PostgreSQL), Prisma, NextAuth, Vercel
-- 3-step check-in flow, keyboard shortcuts (F5/F6/F8), room timeline with drag-drop
-
-→ [staywise](https://github.com/SimonHtet/staywise) *(private — available on request)*
-
----
-
 ## Stack
 
 ```
