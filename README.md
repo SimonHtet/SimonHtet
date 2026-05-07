@@ -14,6 +14,7 @@ Built in-house to replace a ฿1M+ vendor quote for custom MES trigger logic and
 - Data flows from multiple sources: PLC signals, SQL Server, and 16+ Budibase low-code apps (100+ daily active users) built in-house for production floor operations
 - Designed layered data flows separating raw machine signals, event processing, and KPI reporting for manufacturing analytics
 - Power BI dashboard tracking efficiency, waste%, and yield — reviewed weekly at director level
+- Predictive maintenance prototype: Random Forest classifier (scikit-learn) scoring breakdown risk from running hours, temperature, and vibration — same signals the live pipeline collects
 
 → [smart-factory-platform](https://github.com/SimonHtet/smart-factory-platform)
 
@@ -25,7 +26,7 @@ Built in-house to replace a ฿1M+ vendor quote for custom MES trigger logic and
 Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma
 Frontend          Next.js · React · TypeScript · JavaScript · Tailwind
 Low-Code          Budibase (16+ apps, 100+ daily active users)
-BI & Analytics    Power BI · DAX
+BI & Analytics    Power BI · DAX · scikit-learn
 Integration       PLC · WMS · SAP · REST APIs
 DevOps            Vercel · Git · GitHub
 ```
