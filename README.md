@@ -11,6 +11,7 @@ Replaced a ฿3M+ quoted MES solution with a Python event pipeline for 23 Tetra 
 
 - Eliminates SQL Server trigger race conditions that blocked PLC writes under concurrent load
 - Polls machine state at 1-second intervals, routes step transitions to event handlers with in-memory cooldowns
+- Data flows from multiple sources: PLC signals, SQL Server, and 16+ Budibase low-code apps (100+ daily active users) built in-house for production floor operations
 - Power BI dashboard tracking efficiency, waste%, and yield — reviewed weekly at director level
 
 → [smart-factory-platform](https://github.com/SimonHtet/smart-factory-platform)
@@ -32,6 +33,7 @@ Hotel management SaaS built for Myanmar boutique hotels. Full reservation lifecy
 ```
 Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma
 Frontend          Next.js · React · TypeScript · Tailwind
+Low-Code          Budibase (16+ apps, 100+ daily active users)
 BI & Analytics    Power BI · DAX
 Integration       PLC · WMS · SAP · REST APIs
 DevOps            Vercel · Git · GitHub
