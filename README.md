@@ -7,7 +7,7 @@ Manufacturing Systems Engineer at DairyPlus Co., Ltd. (Bangkok) — self-taught 
 ## What I've Built
 
 ### 🏭 Smart Factory Platform
-Replaced a ฿3M+ quoted MES solution with a Python event pipeline for 23 Tetra Pak filler machines across 3 dairy production plants. Delivered in 6 months against an 18-month vendor timeline.
+Built in-house to replace a ฿1M+ vendor quote for custom MES trigger logic and reporting — Python event pipeline for 23 Tetra Pak filler machines across 3 dairy production plants. Delivered in 6 months against an 18-month vendor timeline.
 
 - Eliminates SQL Server trigger race conditions that blocked PLC writes under concurrent load
 - Polls machine state at 1-second intervals, routes step transitions to event handlers with in-memory cooldowns
