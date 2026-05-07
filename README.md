@@ -22,7 +22,7 @@ Replaced a ฿3M+ quoted MES solution with a Python event pipeline for 23 Tetra 
 
 ```
 Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma
-Frontend          Next.js · React · TypeScript · Tailwind
+Frontend          Next.js · React · TypeScript · JavaScript · Tailwind
 Low-Code          Budibase (16+ apps, 100+ daily active users)
 BI & Analytics    Power BI · DAX
 Integration       PLC · WMS · SAP · REST APIs
