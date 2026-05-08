@@ -1,6 +1,6 @@
 # Hi, I'm Simon 👋
 
-Manufacturing Systems Engineer at DairyPlus Co., Ltd. (Bangkok) — self-taught across PLC integration, SQL Server, Python pipelines, and Power BI. Transitioning into data engineering and manufacturing IT.
+Manufacturing Systems Engineer at DairyPlus Co., Ltd. — self-taught across PLC integration, SQL Server, Python pipelines, and Power BI. Transitioning into data engineering and manufacturing IT.
 
 ---
 
