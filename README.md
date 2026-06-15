@@ -7,7 +7,7 @@ Manufacturing Systems Engineer at DairyPlus Co., Ltd. — self-taught across PLC
 ## What I've Built
 
 ### 🏭 Smart Factory Platform
-Built in-house to replace a ฿1M+ vendor quote for custom MES trigger logic and reporting — Python event pipeline for 23 Tetra Pak filler machines across 3 dairy production plants. Delivered in 6 months against an 18-month vendor timeline.
+Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was never needed. Python event pipeline for 23 Tetra Pak filler machines across 3 dairy production plants; production-operations core delivered in 6 months against an 18-month vendor timeline.
 
 - Eliminates SQL Server trigger race conditions that blocked PLC writes under concurrent load
 - Polls machine state at 1-second intervals, routes step transitions to event handlers with in-memory cooldowns
@@ -15,8 +15,14 @@ Built in-house to replace a ฿1M+ vendor quote for custom MES trigger logic and
 - Designed layered data flows separating raw machine signals, event processing, and KPI reporting for manufacturing analytics
 - Power BI dashboard tracking efficiency, waste%, and yield — reviewed weekly at director level
 - Predictive maintenance prototype: Random Forest classifier (scikit-learn) scoring breakdown risk from running hours, temperature, and vibration — same signals the live pipeline collects
+- *Jarvis for the Factory Floor* (Databricks hackathon): GenAI assistant answering natural-language questions over production data
 
-→ [smart-factory-platform](https://github.com/SimonHtet/smart-factory-platform)
+→ *Private repo (live employer system) — code walkthrough available on request*
+
+### 🏨 Staywise — Hotel PMS (SaaS)
+Property-management system for boutique hotels — Next.js 14, Supabase/Postgres via Prisma, deployed on Vercel. 3-step check-in, folios & group billing with checkout settlement enforcement, night audit, multi-currency, role-based access, PDPA-compliant guest handling.
+
+→ [Repo](https://github.com/SimonHtet/Simon) · live demo available on request
 
 ---
 
