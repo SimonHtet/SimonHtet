@@ -20,7 +20,7 @@ Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was neve
 - *Jarvis for the Factory Floor* (Databricks hackathon): GenAI assistant answering natural-language questions over production data
 - Formalized into the company's official Digital Transformation SOP (ISO/IEC 27001 aligned), approved at management level
 
-→ *Private repo (live employer system) — code walkthrough available on request*
+→ *Private repo (live employer system, IP-protected) — architecture walkthrough available on request*
 
 ### 🏨 Staywise — Hotel PMS (SaaS)
 Property-management system for boutique hotels — Next.js 14, Supabase/Postgres via Prisma, deployed on Vercel. 3-step check-in, folios & group billing with checkout settlement enforcement, night audit, multi-currency, role-based access, PDPA-compliant guest handling.
