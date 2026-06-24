@@ -11,11 +11,14 @@ Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was neve
 
 - Eliminates SQL Server trigger race conditions that blocked PLC writes under concurrent load
 - Polls machine state at 1-second intervals, routes step transitions to event handlers with in-memory cooldowns
+- **Reel → pallet recall traceability**: reverse-maps any finished pallet back to the supplier reel that fed it — and every other pallet that reel touched. Built around recall safety, deliberately choosing a method with bounded, predictable error over one that could fail silently
+- **Downtime attribution / data integrity**: isolates upstream-line stalls from the filler's own downtime via PLC signal edge-detection, so efficiency KPIs reflect each machine's true performance instead of blaming it for an idle feed
 - Data flows from multiple sources: PLC signals, SQL Server, and 16+ Budibase low-code apps (100+ daily active users) built in-house for production floor operations
 - Designed layered data flows separating raw machine signals, event processing, and KPI reporting for manufacturing analytics
 - Power BI dashboard tracking efficiency, waste%, and yield — reviewed weekly at director level
 - Predictive maintenance prototype: Random Forest classifier (scikit-learn) scoring breakdown risk from running hours, temperature, and vibration — same signals the live pipeline collects
 - *Jarvis for the Factory Floor* (Databricks hackathon): GenAI assistant answering natural-language questions over production data
+- Formalized into the company's official Digital Transformation SOP (ISO/IEC 27001 aligned), approved at management level
 
 → *Private repo (live employer system) — code walkthrough available on request*
 
