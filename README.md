@@ -41,7 +41,7 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 | 🥛 `UHT-Work` 🔒 | Offline-first app migration prototype for UHT filling operations. Private (employer system) |
 | 🔧 [`preventive-maintenance-tracker`](https://github.com/SimonHtet/preventive-maintenance-tracker) | Mobile-friendly preventive maintenance tracker — photo uploads, signatures, PDF reporting (React + Vite) |
 | 📊 [`hotel-analysis`](https://github.com/SimonHtet/hotel-analysis) | Hotel data analysis dashboard — Next.js, Prisma, Tailwind |
-| 📓 [`experiments`](https://github.com/SimonHtet/experiments) | Scratch space — prototypes and notebook experiments |
+| 📓 `experiments` 🔒 | Scratch space — prototypes and notebook experiments. Private |
 | 👋 [`SimonHtet`](https://github.com/SimonHtet/SimonHtet) | This profile |
 
 ---
