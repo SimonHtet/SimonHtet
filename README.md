@@ -27,7 +27,7 @@ Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was neve
 ### 🏨 Staywise — Hotel PMS (SaaS)
 Property-management system for boutique hotels — Next.js 14, Supabase/Postgres via Prisma, deployed on Vercel. 3-step check-in, folios & group billing with checkout settlement enforcement, night audit, multi-currency, role-based access, PDPA-compliant guest handling.
 
-→ [Repo](https://github.com/SimonHtet/Simon) · live demo available on request
+→ [Repo](https://github.com/SimonHtet/staywise) · live demo available on request
 
 ---
 
@@ -36,11 +36,12 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 | Repo | What it is |
 |------|------------|
 | 🏭 `smart-factory-platform` 🔒 | Flagship — Python event pipeline + SQL trigger engine + dbt + Power BI for 23 filler machines across 3 plants. Private (live employer system); architecture walkthrough on request |
-| 🏨 [`Simon`](https://github.com/SimonHtet/Simon) | Staywise — hotel PMS SaaS. Next.js 14, Prisma, Supabase/Postgres, NextAuth, Vercel |
+| 🏨 [`staywise`](https://github.com/SimonHtet/staywise) | Staywise — hotel PMS SaaS. Next.js 14, Prisma, Supabase/Postgres, NextAuth, Vercel |
 | 🚛 `fleet-planning` 🔒 | Continuous dock-timeline planner — SAP + WMS → auto dock assignment across 16 docks with variable durations and carton caps. Private (employer system) |
-| 📊 [`hotel-analysis`](https://github.com/SimonHtet/hotel-analysis) | Hotel data analysis experiments — TypeScript |
-| 🔧 [`PM-Tracking`](https://github.com/SimonHtet/PM-Tracking) | Maintenance-tracking app prototype (Google AI Studio) |
-| 📓 [`Hotel`](https://github.com/SimonHtet/Hotel) | Jupyter sandbox — hotel data experiments |
+| 🥛 `UHT-Work` 🔒 | Offline-first app migration prototype for UHT filling operations. Private (employer system) |
+| 🔧 [`preventive-maintenance-tracker`](https://github.com/SimonHtet/preventive-maintenance-tracker) | Mobile-friendly preventive maintenance tracker — photo uploads, signatures, PDF reporting (React + Vite) |
+| 📊 [`hotel-analysis`](https://github.com/SimonHtet/hotel-analysis) | Hotel data analysis dashboard — Next.js, Prisma, Tailwind |
+| 📓 [`experiments`](https://github.com/SimonHtet/experiments) | Scratch space — prototypes and notebook experiments |
 | 👋 [`SimonHtet`](https://github.com/SimonHtet/SimonHtet) | This profile |
 
 ---
