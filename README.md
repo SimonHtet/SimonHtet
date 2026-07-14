@@ -24,6 +24,16 @@ Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was neve
 
 → *Private repo (live employer system, IP-protected) — architecture walkthrough available on request*
 
+### 🚛 Warehouse Dock Planner — "ML estimates, rules decide" (live demo)
+An XGBoost dock-duration model exported to **ONNX and running entirely in the browser** — no backend, no API — feeding a deterministic dock-assignment engine. The public mini-version of a private production planner, built to show both halves of the judgment: ML where patterns are learned, rules where logic must be trusted.
+
+- **Duration model**: truck class × cartons × SKUs × hand-vs-pallet arrange method × time-of-day × warehouse state (ASRS picking rate, forklifts, sortation rate) — the warehouse-state sliders re-predict the entire plan live
+- **Rules engine**: 07:00 gate-open wave, then event-driven backfill (a dock is refilled the moment its truck exits), exports load first on dedicated docks, trailers span 2 docks, exit-to-gate occupancy by truck size, hourly planned-cartons vs capacity strip
+- **Human in charge**: click-to-move with rule blocking (illegal moves name the violated rule), 📌 pins that survive re-plans, 📥 yard/staging to park trucks off a packed board
+- **Train ↔ deploy parity**: pytest proves ONNX ≡ sklearn to ±0.1 min, and the page re-verifies a fixture prediction on every load — the "model verified" badge means the browser matches the training machine
+
+→ [Live demo](https://simonhtet.github.io/warehouse-dock-planner-demo/) · [Repo](https://github.com/SimonHtet/warehouse-dock-planner-demo) · synthetic data only
+
 ### 🏨 Staywise — Hotel PMS (SaaS)
 Property-management system for boutique hotels — Next.js 14, Supabase/Postgres via Prisma, deployed on Vercel. 3-step check-in, folios & group billing with checkout settlement enforcement, night audit, multi-currency, role-based access, PDPA-compliant guest handling.
 
@@ -53,7 +63,7 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma · dbt
 Frontend          Next.js · React · TypeScript · JavaScript · Tailwind
 Low-Code          Budibase (16+ apps, 100+ daily active users)
-ML & Analytics    Power BI · DAX · scikit-learn · pandas
+ML & Analytics    Power BI · DAX · scikit-learn · XGBoost · ONNX · pandas
 Integration       PLC · WMS · SAP · REST APIs
 DevOps            Vercel · Git · GitHub
 ```
