@@ -19,7 +19,6 @@ Built in-house after a vendor MES was quoted at ฿3M+ — the purchase was neve
 - Designed layered data flows separating raw machine signals, event processing, and KPI reporting for manufacturing analytics
 - Power BI dashboard tracking efficiency, waste%, and yield — reviewed weekly at director level
 - Predictive maintenance prototype: Random Forest classifier (scikit-learn) scoring breakdown risk from running hours, temperature, and vibration — same signals the live pipeline collects
-- *Jarvis for the Factory Floor* (Databricks hackathon): GenAI assistant answering natural-language questions over production data
 - Formalized into the company's official Digital Transformation SOP (ISO/IEC 27001 aligned), approved at management level
 
 → *Private repo (live employer system, IP-protected) — architecture walkthrough available on request*
@@ -33,6 +32,16 @@ An XGBoost dock-duration model exported to **ONNX and running entirely in the br
 - **Train ↔ deploy parity**: pytest proves ONNX ≡ sklearn to ±0.1 min, and the page re-verifies a fixture prediction on every load — the "model verified" badge means the browser matches the training machine
 
 → [Live demo](https://simonhtet.github.io/warehouse-dock-planner-demo/) · [Repo](https://github.com/SimonHtet/warehouse-dock-planner-demo) · synthetic data only
+
+### 🤖 Jarvis for the Factory Floor — GenAI over production data (Databricks)
+Hackathon build (*Build Intelligent Apps on Databricks*, APJ): a conversational plant assistant over real dairy production data — ask "which machine had the most downtime last week?" in plain language, no SQL needed. Built entirely with native Databricks tools, end to end in under a week.
+
+- Production runs across 8 machine groups in a **Delta Lake** table under **Unity Catalog** (full lineage), queried through a **Genie Space** tuned with column descriptions and a curated natural-language question set
+- **AI/BI Dashboard** with Z-score anomaly detection · **SQL alert** on efficiency drops · scheduled **Workflows** job (Monday 7am)
+- `ai_query()` notebook that generates a weekly OEE report — in English *and* Thai — and writes it back to a Delta table: the LLM works inside the pipeline, not as a chatbot bolted on
+- Deliberately skipped AutoML for predictive maintenance — the honest call given event-driven, partially synthetic history — and shipped an `ai_query()` trend-based risk forecast instead
+
+→ *Private Databricks workspace (real production data) — demo walkthrough available on request*
 
 ### 🏨 Staywise — Hotel PMS (SaaS)
 Property-management system for boutique hotels — Next.js 14, Supabase/Postgres via Prisma, deployed on Vercel. 3-step check-in, folios & group billing with checkout settlement enforcement, night audit, multi-currency, role-based access, PDPA-compliant guest handling.
@@ -60,7 +69,7 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 ## Stack
 
 ```
-Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma · dbt
+Data & Backend    Python · SQL Server · PostgreSQL · Databricks (Delta Lake · Unity Catalog) · pyodbc · Prisma · dbt
 Frontend          Next.js · React · TypeScript · JavaScript · Tailwind
 Low-Code          Budibase (16+ apps, 100+ daily active users)
 ML & Analytics    Power BI · DAX · scikit-learn · XGBoost · ONNX · pandas
