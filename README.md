@@ -36,6 +36,7 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 | Repo | What it is |
 |------|------------|
 | 🏭 `smart-factory-platform` 🔒 | Flagship — Python event pipeline + SQL trigger engine + dbt + Power BI for 23 filler machines across 3 plants. Private (live employer system); architecture walkthrough on request |
+| 🤖 [`warehouse-dock-planner-demo`](https://github.com/SimonHtet/warehouse-dock-planner-demo) | **ML estimates, rules decide** — XGBoost dock-duration model → ONNX, running in-browser, feeding a rule-based dock assigner · [live demo](https://simonhtet.github.io/warehouse-dock-planner-demo/) |
 | 🏨 [`staywise`](https://github.com/SimonHtet/staywise) | Staywise — hotel PMS SaaS. Next.js 14, Prisma, Supabase/Postgres, NextAuth, Vercel |
 | 🚛 `fleet-planning` 🔒 | Continuous dock-timeline planner — SAP + WMS → auto dock assignment across 16 docks with variable durations and carton caps. Private (employer system) |
 | 🥛 `UHT-Work` 🔒 | Offline-first app migration prototype for UHT filling operations. Private (employer system) |
