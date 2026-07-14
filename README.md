@@ -1,6 +1,8 @@
 # Hi, I'm Simon 👋
 
-Manufacturing Systems Engineer at DairyPlus Co., Ltd. — self-taught across PLC integration, SQL Server, Python pipelines, and Power BI. Transitioning into data engineering and manufacturing IT.
+**Manufacturing AI & Data Engineer** — building production-scale data platforms.
+
+Currently Manufacturing Systems Engineer at DairyPlus Co., Ltd. — self-taught across PLC integration, SQL Server, Python pipelines, machine learning, and Power BI. Transitioning into data engineering and manufacturing IT.
 
 ---
 
@@ -29,13 +31,27 @@ Property-management system for boutique hotels — Next.js 14, Supabase/Postgres
 
 ---
 
+## Repositories
+
+| Repo | What it is |
+|------|------------|
+| 🏭 `smart-factory-platform` 🔒 | Flagship — Python event pipeline + SQL trigger engine + dbt + Power BI for 23 filler machines across 3 plants. Private (live employer system); architecture walkthrough on request |
+| 🏨 [`Simon`](https://github.com/SimonHtet/Simon) | Staywise — hotel PMS SaaS. Next.js 14, Prisma, Supabase/Postgres, NextAuth, Vercel |
+| 🚛 `fleet-planning` 🔒 | Continuous dock-timeline planner — SAP + WMS → auto dock assignment across 16 docks with variable durations and carton caps. Private (employer system) |
+| 📊 [`hotel-analysis`](https://github.com/SimonHtet/hotel-analysis) | Hotel data analysis experiments — TypeScript |
+| 🔧 [`PM-Tracking`](https://github.com/SimonHtet/PM-Tracking) | Maintenance-tracking app prototype (Google AI Studio) |
+| 📓 [`Hotel`](https://github.com/SimonHtet/Hotel) | Jupyter sandbox — hotel data experiments |
+| 👋 [`SimonHtet`](https://github.com/SimonHtet/SimonHtet) | This profile |
+
+---
+
 ## Stack
 
 ```
-Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma
+Data & Backend    Python · SQL Server · PostgreSQL · pyodbc · Prisma · dbt
 Frontend          Next.js · React · TypeScript · JavaScript · Tailwind
 Low-Code          Budibase (16+ apps, 100+ daily active users)
-BI & Analytics    Power BI · DAX · scikit-learn
+ML & Analytics    Power BI · DAX · scikit-learn · pandas
 Integration       PLC · WMS · SAP · REST APIs
 DevOps            Vercel · Git · GitHub
 ```
@@ -48,6 +64,19 @@ DevOps            Vercel · Git · GitHub
 - 🎯 Looking for Data Engineering / MES / Manufacturing IT roles in Bangkok
 - 🌱 Building Python and cloud skills alongside production work
 - 📚 Expanding skills in pipeline orchestration, cloud platforms, and scalable data architecture
+
+---
+
+## Lessons Learned
+
+Things production systems taught me that tutorials didn't:
+
+- **Instrument before you theorize.** When PLC counters kept turning up NULL, no amount of reading the trigger code found it. A write-audit trap on the table caught the real culprit in days: a second writer (a low-code app doing full-row saves) silently overwriting machine-owned columns.
+- **Guard system-owned data at the database layer.** Low-code apps are great for operator UIs, but the database is the last line of defense — a guard trigger that blocks 0/NULL regressions on PLC-owned columns turned a recurring silent corruption into an impossible one.
+- **For recall traceability, a bounded predictable error beats a silent catastrophic one.** I chose supplier-declared counts (monotonic by construction, small bounded error) over the more precise live counter (which resets mid-run — one missed reset points a recall at the wrong product).
+- **Never rewrite what production depends on.** The event trigger evolved V3 → V6 with each version strictly additive — every KPI that worked yesterday still works today, and any version can be diffed against the last.
+- **Ship a package, not a notebook.** Production Python means a `src/` layout, separated config, and something a reviewer can run end-to-end — a notebook proves the idea, a package proves you can operate it.
+- **Governance is part of engineering.** Getting the platform formalized into an approved SOP (ISO/IEC 27001 aligned) mattered as much as the code — it's what turns a side project into company infrastructure.
 
 ---
 
